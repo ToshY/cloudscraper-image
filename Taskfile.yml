@@ -1,0 +1,41 @@
+version: '3'
+
+vars:
+  NAME: cloudscraper-image
+  REPO: t0shy/cloudscraper-image
+  TAG: latest
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  check:
+    desc: Run pylint & pycodestyle
+    cmds:
+      - docker exec {{.NAME}} pylint --recursive=y . **/*.py
+      - docker exec {{.NAME}} pycodestyle --max-line-length=120 **/*.py
+
+  fix:
+    desc: Run black
+    cmds:
+      - docker exec {{.NAME}} black .
+
+  up:
+    desc: Build image and run container
+    cmds:
+      - |
+        if [ ! -z "$(docker inspect {{.NAME}} | grep 'Running')" ]; then
+          docker rm -f {{.NAME}}
+        fi
+      - docker build -t {{.REPO}}:{{.TAG}} --no-cache .
+      - docker run -dit --name {{.NAME}} {{.REPO}}:{{.TAG}}
+
+  down:
+    desc: Stop and remove
+    cmds:
+      - |
+        if [ ! -z "$(docker inspect {{.NAME}} | grep 'Running')" ]; then
+          docker rm -f {{.NAME}}
+        fi
+      - docker image rm -f {{.REPO}}:{{.TAG}}
