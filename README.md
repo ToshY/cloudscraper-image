@@ -66,7 +66,7 @@ curl http://<container-ip>:8000/image?url=<encoded-url>
 ### 🐍 Plain
 
 ```shell
-curl http://127.0.0.1:8080/image?url=<encoded-url>
+curl http://127.0.0.1:8000/image?url=<encoded-url>
 ```
 
 ## 📬 Response

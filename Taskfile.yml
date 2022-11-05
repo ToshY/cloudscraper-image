@@ -35,7 +35,10 @@ tasks:
     desc: Stop and remove
     cmds:
       - |
-        if [ ! -z "$(docker inspect {{.NAME}} | grep 'Running')" ]; then
+        if [ -z "$(docker inspect {{.NAME}} | grep 'Running')" ]; then
           docker rm -f {{.NAME}}
         fi
-      - docker image rm -f {{.REPO}}:{{.TAG}}
+      - |
+        if [ -z "$(docker images -q {{.REPO}}:{{.TAG}})" ]; then
+          docker image rm -f {{.REPO}}:{{.TAG}}
+        fi
