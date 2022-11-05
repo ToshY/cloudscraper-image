@@ -36,12 +36,12 @@ pip install -r requirements.txt
 ### 🐋 Docker
 
 ```shell
-docker run -dit --name cloudscraper t0shy/cloudscraper-image:latest
+docker run -dit --name cloudscraper-image t0shy/cloudscraper-image:latest
 ```
 
 > Note: You can remove the container after usage:
 > ```shell
-> docker rm -f cloudscraper
+> docker rm -f cloudscraper-image
 > ```
 
 ### 🐍 Plain
