@@ -1,7 +1,7 @@
 # 🖼️ Cloudscraper for images
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/ToshY/cloudscraper-image?sort=semver)
-![Docker Hub repository](https://img.shields.io/badge/Docker%20Hub-t0shy%2Fcloudscraper--image-blue)
+[![Docker Hub repository](https://img.shields.io/badge/Docker%20Hub-t0shy%2Fcloudscraper--image-blue)](https://hub.docker.com/r/t0shy/cloudscraper-image)
 [![Pylint](https://github.com/ToshY/cloudscraper-image/actions/workflows/pylint.yml/badge.svg)](https://github.com/ToshY/cloudscraper-image/actions/workflows/pylint.yml/badge.svg)
 [![Pip Audit](https://github.com/ToshY/cloudscraper-image/actions/workflows/security.yml/badge.svg)](https://github.com/ToshY/cloudscraper-image/actions/workflows/security.yml/badge.svg)
 [![Code style: black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
