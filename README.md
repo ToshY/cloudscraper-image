@@ -60,7 +60,7 @@ curl http://<container-ip>:8000/image?url=<encoded-url>
 
 > Note: You can get the IP address of the container by running the following command:
 > ```shell
-> docker inspect --format "{{ .NetworkSettings.IPAddress }}" cloudscraper
+> docker inspect --format "{{ .NetworkSettings.IPAddress }}" cloudscraper-image
 > ```
 
 ### 🐍 Plain
