@@ -1,5 +1,5 @@
 cloudscraper==1.2.65
-falcon==3.1.0
+falcon==3.1.1
 validators==0.20.0
 pyfiglet==0.8.post1
 rich==12.6.0
