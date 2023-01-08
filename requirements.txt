@@ -1,4 +1,4 @@
-cloudscraper==1.2.65
+cloudscraper==1.2.67
 falcon==3.1.1
 validators==0.20.0
 pyfiglet==0.8.post1
